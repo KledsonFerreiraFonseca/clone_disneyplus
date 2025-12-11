@@ -1,0 +1,40 @@
+.plans {
+    padding: 5.6vw;
+
+    h2 {
+        text-align: center;/*centralizar o cabeçalho*/
+    }
+
+    &__list {
+        display: flex;/*para colocar um conteúdo um do lado do outro*/
+        justify-content: space-around;/*para colocar o espaçamento dos elemento de uma forma padrao*/
+        margin-top: 50px;
+
+        &__item {
+            text-align: center;/*centralizar o texto*/
+            padding: 60px 44px 44px;/*aplicar o espaçamento das <li>s*/
+            max-width: 380px;
+            width: 100%;
+
+            &:nth-child(2) {
+                background-image: url(../images/fundo_combo_plus.png);
+                background-repeat: no-repeat;/*corrigindo a reptição*/
+                background-size: contain;/*procurar a preservar a proporção da imagem que ocupar do altura e largura do <li>*/
+            }
+
+            img {
+                height: 83px;
+            }
+
+            strong {
+            display: block;/*colocando os elementos em bloco*/
+            margin-top: 24px;
+            }
+        }    
+    }
+
+    p {
+        text-align: center;/*centralizar o ultimo texto*/
+    }
+}
+
