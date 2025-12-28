@@ -10,6 +10,14 @@
         justify-content: space-around;/*para colocar o espaçamento dos elemento de uma forma padrao*/
         margin-top: 50px;
 
+        @media (max-width: 768px) {
+            display: block;/*colocar os elementos um embaixo do outro em telas menores*/
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+
         &__item {
             text-align: center;/*centralizar o texto*/
             padding: 60px 44px 44px;/*aplicar o espaçamento das <li>s*/

@@ -1,0 +1,66 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;/*fica fixo no topo da pagina quando der scroll*/
+    top: 0;/*definindo a posiçao do elemento sticky*/
+    left: 0;/*definindo a posiçao do elemento sticky*/
+    background-color: variaveis.$corDeFundo;
+    transition: background-color .5s ease;
+    z-index: 1;/*para ficar acima dos outros elementos da pagina*/
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: background-color .5s ease;
+
+        .header {
+            &__logo, &__links__item:first-child {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .5s ease;
+            }
+        }
+    }
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 0 12px 0 20px;//reduzindo o padding//
+        }
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+        transition: opacity .5s ease;
+
+        @media (max-width: 768px) {
+            max-width: 64px;//reduzindo o tamanho da logo//
+            
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        &__item {
+            margin: 5px;
+            transition: opacity .5s ease;
+        }
+    }
+
+    .button {
+        height: 50px;
+
+        @media (max-width: 768px) {
+            font-size: 13px;//reduzindo o tamanho da fonte//
+            padding: 8px 11px;//reduzindo o padding//
+            height: 40px;//reduzindo a altura do botao//
+            letter-spacing: 0;//removendo o espaçamento entre letras//
+        }
+    }
+}
+
