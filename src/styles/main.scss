@@ -186,6 +186,11 @@ body {
                 left: 0;//zerando o left//
                 width: 100%;//colocando a largura como 100%//
             }
+
+            @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;/*centralizando os elementos*/
+        }
         }
     }
 
