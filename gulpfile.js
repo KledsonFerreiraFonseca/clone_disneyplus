@@ -2,6 +2,14 @@
 const gulp = require('gulp');/*gulp*/
 const sass = require('gulp-sass')(require('sass'));/*sass*/
 const imagemin = require('gulp-imagemin'); /*plugin de images*/
+const uglify = require('gulp-uglify'); /*plugin de js*/
+
+/*função scripts*/
+function scripts(){
+    return gulp.src('./src/scripts/*.js') /*arquivos fontes*/
+        .pipe(uglify()) /*encadiar a compressão dos arquivos JS*/
+        .pipe(gulp.dest('./dist/js'));/*pasta de destino para os arquivos comprimidos*/
+}
 
 /*função styles*/
 function styles(){
@@ -18,8 +26,9 @@ function images(){
 }
 
 /*exportar funções*/
-exports.default = gulp.parallel(styles, images);/*para executar o sistema em paralelo*/
+exports.default = gulp.parallel(styles, images, scripts);/*para executar o sistema em paralelo*/
 
 exports.watch = function() {/*função para sempre atualizar as alterações do projeto*/
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))/*observar alterações nos arquivos SCSS*/
+    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts))/*observar alterações nos arquivos JS*/
 }
