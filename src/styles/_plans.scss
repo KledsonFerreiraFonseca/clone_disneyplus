@@ -1,6 +1,8 @@
 .plans {
     padding: 5.6vw;
 
+
+
     h2 {
         text-align: center;/*centralizar o cabeçalho*/
     }
@@ -11,7 +13,12 @@
         margin-top: 50px;
 
         @media (max-width: 768px) {
-            display: block;/*colocar os elementos um embaixo do outro em telas menores*/
+            flex-direction: column;
+            align-items: center;/*centralizando os elementos*/
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            max-width: 420px;
         }
 
         .button {
