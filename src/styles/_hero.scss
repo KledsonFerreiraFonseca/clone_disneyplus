@@ -15,6 +15,17 @@
         margin-top: -55px;//ajustando a margem superior para telas menores//
     }
 
+    @media (min-width: 769px) and (max-width: 1024px) {
+        background-image: url(../images/hero_celular.jpeg);//alterando a imagem de fundo para telas menores//
+        padding-top: calc(65vw + 25px); //aumentando o padding-top para telas menores//
+        background-size: contain;//ajustando a imagem de fundo para telas menores//
+        background-repeat: no-repeat;//evitando a repetição da imagem//
+        margin-top: -55px;//ajustando a margem superior para telas menores//
+        
+        }
+
+    
+
     .button {
         margin-top: 2vw;
         margin-bottom: 8px;
@@ -23,6 +34,12 @@
     &__content {
         max-width: 640px;
 
+        @media (min-width: 769px) and (max-width: 1024px) {
+            max-width: 100%;
+            width: 500%;
+            
+        }
+
         &__branding {
             max-width: 320px;
             margin: 0 auto 38px;
@@ -30,6 +47,12 @@
             @media (max-width: 768px) {
                 max-width: 180px;
             }
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+            max-width: 60%;
+            
+            }
+            
         }
 
         .title--small {
@@ -62,6 +85,10 @@
                 
                 img {
                     max-height: 60px;
+
+                    @media (min-width: 769px) and (max-width: 1024px) {
+                        max-height: 100px;//ajustando o tamanho da imagem para tablets//
+                    }
                 }
             }
         }

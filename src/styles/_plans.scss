@@ -1,6 +1,9 @@
 .plans {
     padding: 5.6vw;
 
+    @media (min-width: 769px) and (max-width: 1024px) {
+        padding: 10vw;
+    }
 
 
     h2 {
@@ -18,7 +21,8 @@
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
-            max-width: 420px;
+            flex-direction: column;/*alterando a direção dos elementos para coluna*/
+            align-items: center;/*centralizando os elementos*/
         }
 
         .button {
@@ -31,14 +35,26 @@
             max-width: 380px;
             width: 100%;
 
+            @media (min-width: 769px) and (max-width: 1024px) {
+                max-width: none;
+            }
+
             &:nth-child(2) {
                 background-image: url(../images/fundo_combo_plus.png);
                 background-repeat: no-repeat;/*corrigindo a reptição*/
                 background-size: contain;/*procurar a preservar a proporção da imagem que ocupar do altura e largura do <li>*/
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    background-size: cover;/*ajustando a imagem de fundo para telas médias*/
+                }
             }
 
             img {
                 height: 83px;
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    height: 200px;
+                }
             }
 
             strong {
